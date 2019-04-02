@@ -1,0 +1,10 @@
+pip install bert-serving-server
+pip install bert-serving-client
+
+python download_data.py
+
+bert-serving-start -model_dir ./cased_L-12_H-768_A-12/ -num_worker=4
+
+*in new terminal*
+python summary_bert.py
+
